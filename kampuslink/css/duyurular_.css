@@ -1,0 +1,185 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #d8dfe0;
+  margin: 0;
+  padding-top: 80px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1E2A47;
+  padding: 20px 40px;
+  color: white;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 28px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar nav ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+  color: #ffd700; /* Altın sarısı hover */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.duyuru-baslik {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  color: #1E2A47;
+  text-align: center;
+}
+h2 {
+  font-size: 2rem; /* Adjust the size of the font */
+  font-weight: 600; /* Make the text slightly bold */
+  color: #000000; /* Dark gray color for the text */
+  text-align: center; /* Center-align the text */
+  margin: 20px 0; /* Add space above and below the heading */
+  text-transform: capitalize; /* Ensure the first letter of each word is capitalized */
+  letter-spacing: 0.2px; /* Add some letter spacing */
+}
+
+
+.duyuru {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.duyuru:hover {
+  transform: scale(1.02);
+}
+
+.duyuru img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Sadece default resim için özel küçük boyut */
+.default-img {
+  height: 100px !important;
+  object-fit: contain !important;
+  background-color: #f0f0f0;
+}
+
+.duyuru a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+/* Genel Stil */
+body.dark-mode {
+  background-color: #121212; /* Koyu arka plan */
+  color: #ffffff; /* Yazı rengi beyaz */
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+  background-color: #1e2a47; /* Koyu mavi navbar */
+  color: white;
+}
+
+body.dark-mode .navbar nav ul li a {
+  color: white;
+}
+
+body.dark-mode .navbar nav ul li a:hover {
+  color: #ffd700; /* Altın sarısı hover */
+}
+
+/* Başlıklar */
+body.dark-mode h1, 
+body.dark-mode h2 {
+  color: #ffd700; /* Altın rengi başlıklar */
+}
+
+/* Duyuru Blokları */
+body.dark-mode .duyuru {
+  background-color: #2a2a2a; /* Koyu gri arka plan */
+  color: #ffffff; /* Beyaz yazı */
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .duyuru:hover {
+  transform: scale(1.02);
+}
+
+body.dark-mode .duyuru img {
+  object-fit: cover;
+}
+
+/* Duyuru Başlıkları */
+body.dark-mode .duyuru-baslik {
+  color: #ffd700; /* Altın rengi başlıklar */
+}
+
+/* Duyuru Görseli: Varsayılan Görsel */
+body.dark-mode .default-img {
+  background-color: #3a3a3a; /* Koyu gri arka plan */
+  color: #fff;
+}
+
+/* Duyuru İçeriği */
+body.dark-mode .grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Grid düzeni */
+body.dark-mode .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+body.dark-mode .duyuru a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}

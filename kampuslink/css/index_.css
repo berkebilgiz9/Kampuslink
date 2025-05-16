@@ -1,0 +1,239 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9; 
+  margin: 0;
+  padding-top: 80px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2D3D63;
+  padding: 20px 40px;
+  color: white;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 28px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar nav ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+  color: #ffd700;
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #2D3D63, #1E2A47);
+  color: white;
+  padding: 6rem 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.btn {
+  background: #ffd700;
+  color: #2D3D63;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #FFB300;
+  transform: scale(1.1);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.5);
+}
+
+/* Açıklama (Description) */
+.description {
+  background: linear-gradient(to right, #f4f4f9, #ffffff);
+  padding: 70px 10%;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+  margin-top: -75px;
+}
+
+#baslik1 {
+  font-size: 2.5rem;
+  color: #2D3D63;
+  margin-bottom: 20px;
+}
+
+#paragraf {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: #555;
+  padding: 0 20px;
+  margin: auto;
+  max-width: 1000px;
+}
+
+/* Duyuru Grid */
+.grid, .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.duyuru {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.duyuru:hover {
+  transform: scale(1.02);
+}
+
+.duyuru img, .default-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  max-height: 400px;
+}
+
+.duyuru a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.duyuru-baslik {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  color: #1E2A47;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin: 20px 0;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
+}
+
+/* Özellik Kartları */
+.feature-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  background-color: #f1f1f1;
+}
+
+.feature-card h3 {
+  color: #1E2A47;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Animasyonlar */
+.feature-card:nth-child(1) { animation-delay: 0.3s; }
+.feature-card:nth-child(2) { animation-delay: 0.6s; }
+.feature-card:nth-child(3) { animation-delay: 0.9s; }
+.feature-card:nth-child(4) { animation-delay: 1.2s; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+

@@ -1,0 +1,296 @@
+/* Genel Stil */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e8f0f5;
+    margin: 0;
+    padding-top: 80px;
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E2A47;
+    padding: 20px 40px;
+    color: white;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 28px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffd700;
+}
+
+
+.events-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #000000;
+}
+
+
+h2 {
+    color: #fd202b;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::after {
+    content: "📅";
+    position: absolute;
+    right: -30px;
+    top: 0;
+    font-size: 2rem;
+    animation: pulse 1.5s infinite;
+}
+
+
+.lottie-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.event-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 15px;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #999 transparent;
+    scroll-snap-type: x proximity;
+}
+
+.event-scroll > .event-card {
+    scroll-snap-align: start;
+    min-width: 300px;
+    flex: 0 0 auto;
+}
+
+/* Webkit Scrollbar */
+.event-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.event-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.event-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(145deg, #aaa, #888);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.event-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(145deg, #888, #666);
+}
+
+
+.event-card {
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: scaleFadeIn 0.7s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Yeni Giriş Animasyonu */
+@keyframes scaleFadeIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+/* Etkinlik Başlığı */
+.event-title {
+    font-weight: bold;
+    color: #f44336;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.event-title::before {
+    content: "🎉";
+    margin-right: 8px;
+}
+
+/* Etkinlik Detayları */
+.event-card p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.event-description {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Dosya Bağlantısı */
+.file-link {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #e0f0ff;
+    color: #0073e6;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.file-link:hover {
+    background-color: #cce4ff;
+    color: #004a99;
+}
+
+/* Etkinlik Oluştur Butonu */
+.create-btn-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.create-event-btn {
+    background-color: #1E2A47;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.create-event-btn:hover {
+    background-color: #4A6FA3;
+    transform: scale(1.05);
+}
+
+#create-event-btn::before {
+    content: "➕ ";
+}
+
+#create-event-btn:active {
+    background-color: #2F4975;
+}
+
+/* Giriş Uyarısı */
+#login-warning {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: red;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .event-scroll {
+        flex-direction: column;
+    }
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .event-card {
+    background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .event-title {
+    color: #ff7078;
+}
+
+body.dark-mode .event-card p,
+body.dark-mode .event-description {
+    color: #cccccc;
+}
+
+body.dark-mode .create-event-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .create-event-btn:hover {
+    background-color: #555;
+}
+
+body.dark-mode .file-link {
+    background-color: #2a2a2a;
+    color: #66aaff;
+}
+
+body.dark-mode .file-link:hover {
+    background-color: #3a3a3a;
+    color: #3399ff;
+}

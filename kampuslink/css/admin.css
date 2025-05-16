@@ -1,0 +1,111 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d8dfe0;
+    margin: 0;
+    padding-top: 80px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E2A47;
+    padding: 20px 40px;
+    color: white;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 28px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffd700; 
+}
+
+h2 {
+    color: #333;
+}
+
+table {
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    color: black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    color: black;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #12122c, #1a1a2e);
+    color: #eee;
+}
+
+
+body.dark-mode .navbar {
+    background-color: #12122c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .navbar nav ul li a {
+    color: #fff;
+}
+
+body.dark-mode .navbar nav ul li a:hover {
+    color: #ffd700;
+}

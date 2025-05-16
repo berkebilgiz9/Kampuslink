@@ -1,0 +1,341 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e2a47, #222d5b);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222d5b;
+  padding: 20px 40px;
+  color: white;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 28px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar nav ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar nav ul li a:hover {
+  color: #f1c40f;
+  transform: scale(1.1);
+}
+
+/* Başlık */
+h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #0077b6;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Login Alanı */
+.login-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* Navbar yüksekliği kadar */
+  box-sizing: border-box;
+  animation: zoomIn 0.6s ease forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Form Container */
+.login-container {
+  background-color: #2c3e50;
+  color: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input alanı ve ikonlar */
+.input-icon {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 16px;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.input-icon input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 20px 18px 50px;
+  background-color: #34495e;
+  border: 1px solid #555;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+
+.input-icon input::placeholder {
+  color: #ccc;
+}
+
+.input-icon input:focus {
+  border-color: #f1c40f;
+  box-shadow: 0 0 10px #f1c40f88;
+}
+
+.input-icon:focus-within i {
+  color: #f1c40f;
+}
+
+/* Giriş Butonu */
+.login-form .btn {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  background-color: #f1c40f;
+  color: #222d5b;
+ 
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.login-form .btn:hover {
+  background-color: #00b4d8;
+  transform: scale(1.08);
+}
+
+.login-form .btn:active {
+  background-color: #2F4975;
+}
+
+/* Kayıt Ol Linki */
+.login-form p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+.login-form a {
+  color: #0077b6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  color: #00b4d8;
+}
+
+/* Uyarı mesajları */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Dark Mode for Login Page */
+
+/* Arka planı koyu yap */
+body.dark-mode {
+  background: linear-gradient(135deg, #12122c, #1a1a2e);
+  color: #eee;
+}
+
+/* Navbar koyulaştır */
+body.dark-mode .navbar {
+  background-color: #12122c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Başlık rengi */
+body.dark-mode h2 {
+  color: #ffcc00;
+}
+
+/* Form Container */
+body.dark-mode .login-container {
+  background-color: #34495e;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Input kutuları */
+body.dark-mode .input-icon input {
+  background-color: #2c3e50;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+body.dark-mode .input-icon input::placeholder {
+  color: #888;
+}
+
+body.dark-mode .input-icon i {
+  color: #bbb;
+}
+
+/* Input odakta iken */
+body.dark-mode .input-icon:focus-within {
+  border-color: #f1c40f;
+  box-shadow: 0 0 10px #f1c40f88;
+}
+
+body.dark-mode .input-icon:focus-within i {
+  color: #f1c40f;
+}
+
+/* Giriş Butonu */
+body.dark-mode .login-form .btn {
+  background-color: #f1c40f;
+  color: #222d5b;
+}
+
+body.dark-mode .login-form .btn:hover {
+  background-color: #00b4d8;
+  transform: scale(1.08);
+}
+
+body.dark-mode .login-form .btn:active {
+  background-color: #2F4975;
+}
+
+/* Kayıt Ol Linki */
+body.dark-mode .login-form p {
+  color: #ccc;
+}
+
+body.dark-mode .login-form a {
+  color: #4dabf7;
+}
+
+body.dark-mode .login-form a:hover {
+  color: #00cfff;
+}
+
+
+body.dark-mode .alert {
+  background-color: #2c2f48;
+  color: #f1c40f;
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+body.dark-mode .alert-success {
+  background-color: #1f3d2d;
+  color: #c6f6d5;
+}
+
+body.dark-mode .alert-danger {
+  background-color: #4a1c1c;
+  color: #f8d7da;
+}
+body.dark-mode .alert-info {
+  background-color: #f1c40f;
+  color: #0c1014;
+}

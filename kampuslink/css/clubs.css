@@ -1,0 +1,485 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d8dfe0;
+    margin: 0;
+    padding-top: 80px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E2A47;
+    padding: 20px 40px;
+    color: white;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 28px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffd700; 
+}
+
+
+.container {
+    margin-top: 30px;
+    padding: 0 20px;
+    color: #444;
+}
+
+h1 ,h2{
+    font-family: 'Roboto', sans-serif;
+    color: #1E2A47;
+}
+h3.club-card {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+
+.faculties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.faculty-card {
+    background: linear-gradient(145deg, #1E2A47, #1E2A47);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    flex: 1 1 calc(33.33% - 24px);
+    min-width: 280px;
+    max-width: 320px;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 35px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.faculty-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.faculty-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.faculty-card.active {
+    background: #ffffff;
+    color: rgb(255, 0, 0);
+}
+
+.faculty-card p {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+.faculty-card.selected {
+    background: #b30000 !important; 
+    color: #fff;
+}
+
+
+#clubs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 20px;
+    justify-content: center;  
+}
+
+
+.club-card {
+    background: #ffffff;
+    color: #333;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.club-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.club-card .club-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2e3b52;
+    margin-bottom: 15px;
+}
+
+.club-card .club-info {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.club-card button {
+    background-color: #1E2A47;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.club-card button:hover {
+    background-color: #ffd700;
+    transform: translateY(-4px);
+}
+
+.club-card button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.club-card .join-button {
+    margin-top: 20px;
+}
+
+
+h3#selected-faculty {
+    display: none;
+    color: #ff4d4d;
+    background-color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 40px auto 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#pagination-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#pagination-container button {
+    padding: 8px 18px;
+    margin: 0 6px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#pagination-container button.active {
+    background-color: #1E2A47;
+    color: white;
+}
+
+#pagination-container button:hover {
+    background-color: #ffffff;
+    color: white;
+}
+
+.join-button {
+    background-color: #1E2A47;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 15px;
+}
+
+.join-button:hover {
+    background-color: #43464b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.join-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 175, 255, 0.4);
+}
+
+.join-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+#warningModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.close-btn {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
+.login-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1E2A47;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-link:hover {
+    background-color: #1E2A47;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #12122c, #1a1a2e);
+    color: #eee;
+}
+
+
+body.dark-mode .navbar {
+    background-color: #12122c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .navbar nav ul li a {
+    color: #fff;
+}
+
+body.dark-mode .navbar nav ul li a:hover {
+    color: #ffd700;
+}
+
+
+body.dark-mode h2, 
+body.dark-mode #baslik1,
+body.dark-mode .duyuru-baslik,
+body.dark-mode .feature-card h3 {
+    color: #ffcc00;
+}
+
+
+body.dark-mode .club-card {
+    background-color: #2a2a3f;
+    color: #ccc;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .club-card:hover {
+    background-color: #3a3a55;
+}
+
+
+body.dark-mode .hero {
+    background: linear-gradient(to right, #1a1a2e, #0f1736);
+    color: #fff;
+}
+
+
+body.dark-mode .description {
+    background: #2a2a3f;
+    color: #ddd;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+body.dark-mode .input-group {
+    background-color: #1e1e30;
+    color: #ddd;
+}
+
+body.dark-mode .input-group input {
+    background-color: #1e1e30;
+    color: #eee;
+}
+
+body.dark-mode .input-group input::placeholder {
+    color: #888;
+}
+
+body.dark-mode .input-group i {
+    color: #bbb;
+}
+
+
+body.dark-mode .input-group:focus-within {
+    border-color: #ffd700;
+    box-shadow: 0 0 10px #ffd70088;
+}
+
+body.dark-mode .input-group:focus-within i {
+    color: #ffd700;
+}
+
+
+body.dark-mode .join-button {
+    background-color: #4c4c66;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.dark-mode .join-button:hover {
+    background-color: #5a5a7a;
+}
+
+
+body.dark-mode .auth-form p {
+    color: #ccc;
+}
+
+
+body.dark-mode .auth-form a {
+    color: #4dabf7;
+}
+
+body.dark-mode .auth-form a:hover {
+    color: #00cfff;
+}
+
+
+body.dark-mode .alert-danger {
+    background-color: #4b1c21;
+    color: #f8d7da;
+}
+
+body.dark-mode .alert-success {
+    background-color: #1e3d2c;
+    color: #d4edda;
+}
+
+
+body.dark-mode {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+body.dark-mode .page-container {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+body.dark-mode .page-container.loaded {
+    opacity: 1;
+}
+
+body.dark-mode .faculty-card h3,
+body.dark-mode .faculty-card .faculty-name {
+    color: #ffcc00; 
+}
+
+
+body.dark-mode .faculty-card h3 {
+    color: #ffcc00;  
+}
+
+
+body.dark-mode .faculty-card .faculty-name {
+    color: #ffcc00; 
+}
+.event-card {
+    animation: flipIn 0.7s ease forwards;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+  
+    
+

@@ -1,0 +1,53 @@
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1a1a2e;
+    color: #eee;
+  }
+  
+  body.dark-mode .navbar {
+    background-color: #12122c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.dark-mode .navbar nav ul li a {
+    color: #fff;
+  }
+  
+  body.dark-mode .navbar nav ul li a:hover {
+    color: #ffd700;
+  }
+  
+  body.dark-mode .hero {
+    background: linear-gradient(to right, #1a1a2e, #0f1736);
+    color: #fff;
+  }
+  
+  body.dark-mode .description {
+    background: #2a2a3f;
+    color: #ddd;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.dark-mode #baslik1,
+  body.dark-mode .duyuru-baslik,
+  body.dark-mode .feature-card h3 {
+    color: #ffcc00;
+  }
+  
+  body.dark-mode #paragraf,
+  body.dark-mode .feature-card p {
+    color: #ccc;
+  }
+  
+  body.dark-mode .duyuru {
+    background-color: #2e2e45;
+  }
+  
+  body.dark-mode .feature-card {
+    background-color: #2e2e45;
+  }
+  
+  body.dark-mode .feature-card:hover {
+    background-color: #3a3a55;
+  }
+ 
